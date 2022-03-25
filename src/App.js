@@ -1,19 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import useAccessToken from './hooks/useAccessToken';
-import useAxios from './hooks/useAxios';
+// import useAccessToken from './hooks/useAccessToken';
+// import useAxios from './hooks/useAxios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import GameList from './components/GameList';
+import NavTop from './components/NavTop';
 
 function App() {
 
- useAccessToken();
- const [responseValue]=useAxios('https://api.igdb.com/v4/games');//to fetch games list
-
-
+  // useAxios();
+  //  useAccessToken();
+  //  const [responseValue]=useAxios();//to fetch games list
   return (
-    <div className="App">
-
-
-      
+    <div style={{ backgroundColor: "#003153" }}>
+      <NavTop />
+      <GameList />
     </div>
   );
 }
